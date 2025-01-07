@@ -13,9 +13,7 @@ mqtt:
   username: flying
   password: 654321
   topics:
-    - ${mqtt.topic.state}
-    - ${mqtt.topic.osd}
-
-mqtt.topic:
-  state: thing/product/+/state
-  osd: thing/product/+/osd
+    - thing/product/+/state
+    - thing/product/+/osd
+  redis:
+    expire-seconds: 20   # 消息过期时间，单位秒
